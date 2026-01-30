@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAZBEAR OS 95</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: 'W95FA';
+        src: url('https://cdnjs.cloudflare.com/ajax/libs/w95fa/1.1.0/w95fa.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      :root {
+        --win-gray: #c0c0c0;
+        --win-dark-gray: #808080;
+        --win-light: #ffffff;
+        --win-dark: #000000;
+        --win-blue: #000080;
+        --win-teal: #008080;
+      }
+
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: var(--win-teal);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fallback */
+        /* Smooth cursor is too modern, but default is fine */
+        cursor: default;
+        user-select: none;
+      }
+      
+      /* Pixel font class */
+      .font-w95 {
+        font-family: 'W95FA', 'MS Sans Serif', 'Segoe UI', sans-serif;
+        letter-spacing: 0.5px;
+      }
+
+      /* Windows 95 Bevel Utilities */
+      .bevel-outset {
+        box-shadow: 
+          inset 1px 1px #dfdfdf, 
+          inset -1px -1px #000000, 
+          inset 2px 2px #ffffff, 
+          inset -2px -2px #808080;
+      }
+      
+      .bevel-inset {
+        box-shadow: 
+          inset 1px 1px #808080, 
+          inset -1px -1px #ffffff, 
+          inset 2px 2px #000000, 
+          inset -2px -2px #dfdfdf;
+      }
+
+      .bevel-window {
+        box-shadow: 
+          inset -1px -1px #000000, 
+          inset 1px 1px #dfdfdf, 
+          inset -2px -2px #808080, 
+          inset 2px 2px #ffffff;
+      }
+
+      /* Custom Scrollbar to match Win95 */
+      ::-webkit-scrollbar {
+        width: 16px;
+        height: 16px;
+        background: #dfdfdf;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c0c0c0;
+        box-shadow: inset -1px -1px #000000, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+      }
+      ::-webkit-scrollbar-button {
+        background: #c0c0c0;
+        width: 16px;
+        height: 16px;
+        box-shadow: inset -1px -1px #000000, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+      }
+      /* Dotted focus outline */
+      .focus-dotted {
+        outline: 1px dotted #000;
+        outline-offset: -2px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

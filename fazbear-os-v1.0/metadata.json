@@ -1,0 +1,5 @@
+{
+  "name": "Fazbear OS v1.0",
+  "description": "A retro-themed animatronic management system interfacing with the Fazbear Intelligence Network.",
+  "requestFramePermissions": []
+}
